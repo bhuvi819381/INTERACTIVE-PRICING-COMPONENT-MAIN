@@ -13,31 +13,56 @@
         />
 
         <title>Frontend Mentor | Interactive pricing component</title>
-        <link rel="stylesheet" href="/vite/src/style.css" />
-
-        <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
-            .attribution a {
-                color: hsl(228, 45%, 44%);
-            }
-        </style>
+        <link rel="stylesheet" href="src/style.css" />
     </head>
-    <body class="bg-blue-700 flex">
-        Simple, traffic-based pricing Sign-up for our 30-day trial. No credit
-        card required. Pageviews $ /month Monthly Billing Yearly Billing 25%
-        discount Unlimited websites 100% data ownership Email reports Start my
-        trial
+    <body class="bg-[url(/images/bg-pattern.svg)]  bg-no-repeat bg-top flex flex-col justify-center items-center w-full h-screen bg-[var(--main-background)] ">
+        <header class="h-[15rem] ">
+            <h1>Simple, traffic-based pricing</h1>
+            <h2>Sign-up for our 30-day trial. No credit card required.</h1>
+        </header>
+        <main>
+            <section class="">
+                <h3>Pageviews</h3>
+                <button type="button"><img src="images/icon-slider.svg" alt="icon slider"></button>
+                <p>$ <span>/month</span></p>
+            </section>
+            <section>
+                <p>Monthly Billing</p>
+                <button type="button"></button>
+                <p>Yearly Billing <span>25% discount </span></p>
+            </section>
+            <hr>
+            <section>
+                <div>
+                    <div>
+                        <img src="images/icon-check.svg" alt="icon check">
+                        <p> Unlimited
+            websites</p>
+                    </div>
+                    <div>
+                        <img src="images/icon-check.svg" alt="icon check">
+                        <p>100% data ownership</p>
+                    </div>
+                    <div>
+                        <img src="images/icon-check.svg" alt="icon check">
+                        <p>Email reports</p>
+                    </div>
+                </div>
+                <button type="button">
+                 Start my trial</button>
+            </section>
+        </main>
 
-        <div class="attribution">
+        <div class="attribution text-center text-[11px]">
             Challenge by
             <a
+                class="text-[hsl(228,45%,44%)]"
                 href="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
                 >Frontend Mentor</a
-            >. Coded by <a href="#">Sadick Sulley</a>.
+            >. Coded by
+            <a href="#" class="text-[hsl(228,45%,44%)]">Sadick Sulley</a>.
         </div>
+        <script src="/script.js"></script>
     </body>
 </html>
