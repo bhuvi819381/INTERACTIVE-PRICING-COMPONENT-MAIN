@@ -1,68 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./images/favicon-32x32.png"
-        />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-        <title>Frontend Mentor | Interactive pricing component</title>
-        <link rel="stylesheet" href="src/style.css" />
-    </head>
-    <body class="bg-[url(/images/bg-pattern.svg)]  bg-no-repeat bg-top flex flex-col justify-center items-center w-full h-screen bg-[var(--main-background)] ">
-        <header class="h-[15rem] ">
-            <h1>Simple, traffic-based pricing</h1>
-            <h2>Sign-up for our 30-day trial. No credit card required.</h1>
-        </header>
-        <main>
-            <section class="">
-                <h3>Pageviews</h3>
-                <button type="button"><img src="images/icon-slider.svg" alt="icon slider"></button>
-                <p>$ <span>/month</span></p>
-            </section>
-            <section>
-                <p>Monthly Billing</p>
-                <button type="button"></button>
-                <p>Yearly Billing <span>25% discount </span></p>
-            </section>
-            <hr>
-            <section>
-                <div>
-                    <div>
-                        <img src="images/icon-check.svg" alt="icon check">
-                        <p> Unlimited
-            websites</p>
-                    </div>
-                    <div>
-                        <img src="images/icon-check.svg" alt="icon check">
-                        <p>100% data ownership</p>
-                    </div>
-                    <div>
-                        <img src="images/icon-check.svg" alt="icon check">
-                        <p>Email reports</p>
-                    </div>
-                </div>
-                <button type="button">
-                 Start my trial</button>
-            </section>
-        </main>
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body
+    class="body-bg-img font-custom flex min-h-screen w-full flex-col items-center justify-center px-[1.5rem] text-center text-[var(--text-color)]"
+  >
+    <!-- header -->
+    <header class="header-bg-img mt-[5rem] h-[15rem]">
+      <h1
+        class="mt-[3.8rem] text-[1.35rem] font-[var(--font-weight-800)] text-black"
+      >
+        Simple, traffic-based pricing
+      </h1>
+      <h2 class="mt-4 px-[2rem] text-[1.1rem] font-[var(--font-weight-600)]">
+        Sign-up for our 30-days trial. No credit card required.
+      </h2>
+    </header>
+    <!-- end of header  -->
+    <!-- main container -->
+    <main
+      class="mb-4 w-full max-w-[25rem] rounded-2xl bg-[var(--pricing-component-bg)] px-5 py-10 shadow-2xl md:max-w-[45.5rem]"
+    >
+      <!-- first section -->
+      <section
+        class="mb-[2rem] md:grid md:grid-cols-2 md:grid-rows-2 md:items-center md:border md:border-amber-400"
+      >
+        <h3
+          id="page-views"
+          class="mb-6 font-[var(--font-weight-600)] uppercase md:col-start-1 md:row-start-1 md:mb-0"
+        >
+          100k Pageviews
+        </h3>
+        <form action="#">
+          <label for="range-input">
+            <input
+              type="range"
+              name="range"
+              title="range slider"
+              min="8"
+              max="36"
+              id="range-input"
+              class="mt-[1.5rem] mb-[4.5rem] w-full rounded-md md:col-span-2 md:col-start-1 md:row-start-2 md:block md:border md:border-red-500"
+            />
+          </label>
+        </form>
+        <p
+          id="billing-amount"
+          class="text-[2rem] font-[var(--font-weight-800)] text-black md:col-start-2 md:row-start-1"
+        >
+          $16.00
+          <span class="text-[1rem] font-normal text-[var(--text-color)]"
+            >/ month</span
+          >
+        </p>
+      </section>
+      <!-- end of first secton -->
 
-        <div class="attribution text-center text-[11px]">
-            Challenge by
-            <a
-                class="text-[hsl(228,45%,44%)]"
-                href="https://www.frontendmentor.io?ref=challenge"
-                target="_blank"
-                >Frontend Mentor</a
-            >. Coded by
-            <a href="#" class="text-[hsl(228,45%,44%)]">Sadick Sulley</a>.
+      <!-- second section -->
+      <section
+        class="flex items-center justify-around border border-orange-400 font-[var(--font-weight-600)]"
+      >
+        <p class="">Monthly Billing</p>
+        <label
+          for="switch"
+          class="relative my-[1rem] inline-block h-[25px] w-[50px]"
+        >
+          <input
+            type="checkbox"
+            name="round toggle"
+            id="switch"
+            title="switch button"
+            class="h-0 w-0 opacity-0"
+          />
+          <span class="toggle round"></span>
+        </label>
+        <p class="md:flex md:items-center md:justify-between">
+          Yearly Billing
+          <span
+            class="ml-1.5 rounded-2xl bg-[var(--discount-bg-color)] px-[.8rem] py-[.3rem] text-[var(--discount-text)]"
+          >
+            -25%
+            <span class="hidden md:block md:bg-[var(--discount-bg-color)]"
+              >discount</span
+            ></span
+          >
+        </p>
+      </section>
+      <!-- end of second section -->
+
+      <!-- hr  -->
+      <hr class="my-[2.5rem] text-[var(--empty-slider-bar)]" />
+      <!-- end of hr -->
+
+      <!-- last section -->
+      <section
+        class="font-[var(--font-weight-600)] md:mx-[2rem] md:flex md:items-center md:justify-between"
+      >
+        <div class="[&>*]:mb-4">
+          <div class="flex items-center justify-center md:justify-start">
+            <img
+              src="images/icon-check.svg"
+              alt="icon check"
+              class="mr-4 w-4"
+            />
+            <p>Unlimited websites</p>
+          </div>
+          <div class="flex items-center justify-center md:justify-start">
+            <img
+              src="images/icon-check.svg"
+              alt="icon check"
+              class="mr-4 w-4"
+            />
+            <p>100% data ownership</p>
+          </div>
+          <div class="flex items-center justify-center md:justify-start">
+            <img
+              src="images/icon-check.svg"
+              alt="icon check"
+              class="mr-4 w-4"
+            />
+            <p>Email reports</p>
+          </div>
         </div>
-        <script src="/script.js"></script>
-    </body>
+        <button
+          type="button"
+          class="mt-4 cursor-pointer rounded-4xl bg-[var(--cta-bg-color)] px-[3.9rem] py-4 text-[var(--cta-text-color)] md:mb-6 md:px-[5rem]"
+        >
+          Start my trial
+        </button>
+      </section>
+      <!-- end of last section -->
+    </main>
+    <!-- end of main container -->
+
+    <!-- footer  -->
+    <footer>
+      <div class="attribution text-center text-[var(--introductory-font-size)]">
+        Challenge by
+        <a
+          class="text-[#3e52a3]"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#" class="text-[#3e52a3]">Sadick Sulley</a>.
+      </div>
+      <script src="/script.js"></script>
+    </footer>
+    >
+  </body>
 </html>
